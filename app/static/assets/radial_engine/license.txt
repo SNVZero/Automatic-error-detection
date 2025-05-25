@@ -1,0 +1,11 @@
+Model Information:
+* title:	radial engine
+* source:	https://sketchfab.com/3d-models/radial-engine-25b49d63734748f7a37da9e065da2f72
+* author:	basharnazzal (https://sketchfab.com/basharnazzal)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "radial engine" (https://sketchfab.com/3d-models/radial-engine-25b49d63734748f7a37da9e065da2f72) by basharnazzal (https://sketchfab.com/basharnazzal) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

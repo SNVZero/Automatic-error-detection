@@ -1,0 +1,11 @@
+Model Information:
+* title:	TFSI engine
+* source:	https://sketchfab.com/3d-models/tfsi-engine-1ee66fed927c4aa68afaea4fd5dfc782
+* author:	SPLEEN VISION (https://sketchfab.com/spleen.vision)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "TFSI engine" (https://sketchfab.com/3d-models/tfsi-engine-1ee66fed927c4aa68afaea4fd5dfc782) by SPLEEN VISION (https://sketchfab.com/spleen.vision) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

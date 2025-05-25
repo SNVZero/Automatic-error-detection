@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href = "{{url_for('static', filename='css/carousel.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename= 'css/main.css')}}">
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+  <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+  <script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+  <script src="https://unpkg.com/@magicleap/prismatic/prismatic.min.js"></script>
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+ 
+  <title>WebAR</title>
+</head>
+<body>
+
+<div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a href="{{ url_for('index') }}" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <h1 class="text__color">WebAR</h1>
+        </a>
+      </div>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="{{ url_for('index') }}" class="nav-link px-2 link-secondary">Главная</a></li>
+
+        <li><a href="#" class="nav-link px-2">О проекте</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+          {% if current_user.get_id() %}
+          <button type="button" class="btn btn-outline-primary me-2" onclick="document.location='{{ url_for('profile') }}'">Профиль</button>
+          {% else %}
+        <button type="button" class="btn btn-outline-primary me-2" onclick="document.location='{{ url_for('singIn') }}'">Войти</button>
+        <button type="button" class="btn btn-primary" onclick="document.location='{{ url_for('singUp') }}'">Зарегистрироваться</button>
+          {% endif %}
+      </div>
+    </header>
+  </div>
+<div class="container container__title">
+    <div class="example__title">
+        <h4 class="title__text">Пример работы</h4>
+    </div>
+
+</div>
+<div class="container container__title">
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2B2F33"></rect></svg>
+            <div class="container container__title">
+              <div class="carousel-caption text-start">
+                 <div id="card_car" class="card">
+                    <model-viewer alt="its just a box"
+                        src="../static/assets/objCar/scene.gltf"
+                        background-color="#afe"
+                        shadow-intensity="1"
+                        camera-controls
+                        interaction-prompt="auto"
+                        ar
+                        quick-look-browsers="safari chrome">
+                    </model-viewer>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2B2F33"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption">
+                 <div id="card_v8_engine" class="card">
+                    <model-viewer alt="its just a box"
+                        src="../static/assets/v8_hot_rod_engine/scene.gltf"
+                        background-color="#afe"
+                        shadow-intensity="1"
+                        camera-controls
+                        interaction-prompt="auto"
+                        ar
+                        quick-look-browsers="safari chrome">
+                    </model-viewer>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2B2F33"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption text-end">
+               <div id="card_TFSI_Engine" class="card">
+                    <model-viewer alt="its just a box"
+                        src="../static/assets/tfsi_engine/scene.gltf"
+                        background-color="#afe"
+                        shadow-intensity="1"
+                        camera-controls
+                        interaction-prompt="auto"
+                        ar
+                        quick-look-browsers="safari chrome">
+                    </model-viewer>
+
+             </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#2B2F33"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption text-end">
+               <div id="card_Engine" class="card">
+                    <model-viewer alt="its just a box"
+                        src="../static/assets/engine/scene.gltf"
+                        background-color="#afe"
+                        shadow-intensity="1"
+                        camera-controls
+                        interaction-prompt="auto"
+                        ar
+                        quick-look-browsers="safari chrome">
+                    </model-viewer>
+
+             </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../static/js/carousel.js" crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer@v0.6.2/dist/model-viewer-legacy.js">
+  </script>
+</body>
+</html>

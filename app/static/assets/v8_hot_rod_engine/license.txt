@@ -1,0 +1,11 @@
+Model Information:
+* title:	V8 Hot Rod Engine
+* source:	https://sketchfab.com/3d-models/v8-hot-rod-engine-f20acef709b847eb98839b89c5ef916c
+* author:	ShotaB (https://sketchfab.com/ShotaB)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "V8 Hot Rod Engine" (https://sketchfab.com/3d-models/v8-hot-rod-engine-f20acef709b847eb98839b89c5ef916c) by ShotaB (https://sketchfab.com/ShotaB) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
